@@ -139,7 +139,7 @@ $result = mysqli_fetch_assoc($data);
 		<tr>
 		<td>
 			<table border=1 width=100%>
-				<tr><th><i>Subject code</i></th><th><i>Subject name</i></th><th><i>Internal Maximum Marks</i></th><th><i>Marks obtained</i></th><th><i>External Maximum marks</i></th><th><i>Marks obtained</i></th><th><i>Remark</i></th></tr>
+				<tr><th><i>Subject code</i></th><th><i>Subject name</i></th><th><i>Internal Maximum Marks</i></th><th><i>Marks obtained</i></th><th><i>External Maximum marks</i></th><th><i>Marks obtained</i></th><th><i>Total Marks</i></th><th><i>Remark</i></th></tr>
 				<tr><td>101</td><td>Hindi</td><td>50</td><td><?php echo "$hinint";?></td><td>100</td><td><?php echo "$hinext";?></td><td><?php echo "$hindi"; ?></td><td><?php echo "$remark1"; ?></td></tr>
 				<tr><td>102</td><td>English</td><td>50</td><td><?php echo "$engint";?></td><td>100</td><td><?php echo "$engext";?></td><td><?php echo "$english"; ?></td><td><?php echo "$remark2"; ?></td></tr>
 				<tr><td>103</td><td>Maths</td><td>50</td><td><?php echo "$mathint";?></td><td>100</td><td><?php echo "$mathext";?></td><td><?php echo "$maths"; ?></td><td><?php echo "$remark3"; ?></td></tr>
