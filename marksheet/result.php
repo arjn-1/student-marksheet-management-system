@@ -7,6 +7,7 @@ $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 
 $result = mysqli_fetch_assoc($data);
+	$image=$result['image'];
 	$sn=$result['schoolname'];
     $rn = $result['rollno'];
 	$stn=$result['studentname'];
@@ -131,7 +132,7 @@ $result = mysqli_fetch_assoc($data);
 		<tr>
 		<td>
 			<table width=100%>
-				<tr><td><font size='4'><?php echo "Student Name: $stn"; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo"Father's Name: Mr.$fn";?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo"Mother's Name: Mrs.$mn";?></font></td></tr>
+				<tr><td><font size='4'><?php echo "Student Name: $stn"; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo"Father's Name: Mr.$fn";?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo"Mother's Name: Mrs.$mn";?></font></td><td><img src=<?php echo"$image"; ?> width=120 height=120></td></tr>
 				<tr><td><font size='4'><?php echo "Date Of Birth: $dob"?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo"School Code: $sc";?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo"Address :$add";?></font></td></tr>
 			</table>
 		</td>
@@ -140,11 +141,11 @@ $result = mysqli_fetch_assoc($data);
 		<td>
 			<table border=1 width=100%>
 				<tr><th><i>Subject code</i></th><th><i>Subject name</i></th><th><i>Internal Maximum Marks</i></th><th><i>Marks obtained</i></th><th><i>External Maximum marks</i></th><th><i>Marks obtained</i></th><th><i>Total Marks</i></th><th><i>Remark</i></th></tr>
-				<tr><td>101</td><td>Hindi</td><td>50</td><td><?php echo "$hinint";?></td><td>100</td><td><?php echo "$hinext";?></td><td><?php echo "$hindi"; ?></td><td><?php echo "$remark1"; ?></td></tr>
-				<tr><td>102</td><td>English</td><td>50</td><td><?php echo "$engint";?></td><td>100</td><td><?php echo "$engext";?></td><td><?php echo "$english"; ?></td><td><?php echo "$remark2"; ?></td></tr>
-				<tr><td>103</td><td>Maths</td><td>50</td><td><?php echo "$mathint";?></td><td>100</td><td><?php echo "$mathext";?></td><td><?php echo "$maths"; ?></td><td><?php echo "$remark3"; ?></td></tr>
-				<tr><td>104</td><td>Science</td><td>50</td><td><?php echo "$sciint";?></td><td>100</td><td><?php echo "$sciext";?></td><td><?php echo "$science"; ?></td><td><?php echo "$remark4"; ?></td></tr>
-				<tr><td>105</td><td>Social Science</td><td>50</td><td><?php echo "$ssint";?></td><td>100</td><td><?php echo "$ssext";?></td><td><?php echo "$socialscience"; ?></td><td><?php echo "$remark5"; ?></td></tr>
+				<tr><td>Kcs-101</td><td>Hindi</td><td>50</td><td><?php echo "$hinint";?></td><td>100</td><td><?php echo "$hinext";?></td><td><?php echo "$hindi"; ?></td><td><?php echo "$remark1"; ?></td></tr>
+				<tr><td>Kcs-102</td><td>English</td><td>50</td><td><?php echo "$engint";?></td><td>100</td><td><?php echo "$engext";?></td><td><?php echo "$english"; ?></td><td><?php echo "$remark2"; ?></td></tr>
+				<tr><td>Kcs-103</td><td>Maths</td><td>50</td><td><?php echo "$mathint";?></td><td>100</td><td><?php echo "$mathext";?></td><td><?php echo "$maths"; ?></td><td><?php echo "$remark3"; ?></td></tr>
+				<tr><td>Kcs104</td><td>Science</td><td>50</td><td><?php echo "$sciint";?></td><td>100</td><td><?php echo "$sciext";?></td><td><?php echo "$science"; ?></td><td><?php echo "$remark4"; ?></td></tr>
+				<tr><td>Kcs-105</td><td>Social Science</td><td>50</td><td><?php echo "$ssint";?></td><td>100</td><td><?php echo "$ssext";?></td><td><?php echo "$socialscience"; ?></td><td><?php echo "$remark5"; ?></td></tr>
 				<tr><<td><b>Total</b></td><td><b><?php echo "$total/"; ?>750</b></td></tr>
 			</table>
 		</td>
