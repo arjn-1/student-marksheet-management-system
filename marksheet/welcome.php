@@ -37,24 +37,20 @@ html{
   <div class="collapse navbar-collapse" id="navbarNavDropdown"><!--for grouping and hiding navbar contents by a parent breakpoint. -->
   <ul class="navbar-nav">
       
-      <li class="nav-item">
-        <a class="nav-link" href="register.php">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
-      </li>
+      
+      
       <li class="nav-item">
         <a class="nav-link" href="studentdetails.php">Marksheet Form</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="result.php">Last Added Result</a>
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="abc.php">Result By Roll number</a>
-      </li> -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+      </li>
     </ul>
   </div>
 </nav>
