@@ -29,17 +29,17 @@ if(isset($_POST["upload"])){
     $ssext = $_POST['ssext'];
    
    
-    // $image = $_FILES["putimage"]["name"];
+    $image = $_FILES["putimage"]["name"];
     // $sign = $_FILES["putSign"]["name"];
 
-    // $tempimg = $_FILES["putimage"]["tmp_name"];
+    $tempimg = $_FILES["putimage"]["tmp_name"];
     // $tempsign = $_FILES["putSign"]["tmp_name"];
 
-    // $target = "images/".basename($image);
+    $target = "images/".basename($image);
     // $dest = "sign/".basename($sign);
-
+    move_uploaded_file($tempimg,$target);
     
-    $sql = "INSERT INTO form (rollno, schoolname , studentname ,fathername , mothername ,dob , gender ,address , schoolcode ,engint , engext ,hinint , hinext ,mathint , mathext ,sciint , sciext ,ssint , ssext ) VALUES ('$rn', '$sn', '$stn', '$fn','$mn', '$dob', '$gen','$add','$sc', '$engint', '$engext','$hinint', '$hinext', '$mathint','$mathext', '$sciint', '$sciext','$ssint', '$ssext')";
+    $sql = "INSERT INTO form (rollno, schoolname , studentname ,fathername , mothername ,dob , gender ,address , schoolcode ,engint , engext ,hinint , hinext ,mathint , mathext ,sciint , sciext ,ssint , ssext,image ) VALUES ('$rn', '$sn', '$stn', '$fn','$mn', '$dob', '$gen','$add','$sc', '$engint', '$engext','$hinint', '$hinext', '$mathint','$mathext', '$sciint', '$sciext','$ssint', '$ssext', '$target')";
     mysqli_query($db, $sql);//stores the submitted data into the database table images
 
     //moving the image into the folder
@@ -117,7 +117,7 @@ if(isset($_POST["upload"])){
     </ul>
   </div>
 </nav>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
         <h1>Student Marksheet Form</h1><hr>
         <table>
             <!-- <caption>Student Marsksheet Form</caption> -->
@@ -204,6 +204,7 @@ if(isset($_POST["upload"])){
               type="file"
               id="inputimage"
               name="putimage"
+              value="putimage"
               
             />
             <div>
@@ -213,6 +214,7 @@ if(isset($_POST["upload"])){
               type="file"
               id="inputSign"
               name="putSign"
+              value="putSign"
               
             />
         <input type=submit name="upload" value="UPLOAD">
