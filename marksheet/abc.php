@@ -1,4 +1,5 @@
 <html>
+    <form action="resultroll.php" method="post">
     <table>
         <tr>
             
@@ -8,13 +9,15 @@
         </tr>
     </table>
     <input type=submit name="upload" value="UPLOAD">
-    
+    </form>
+    </html>
+
 <?php
 include("config.php");
 
-if(isset($_POST['upload'])) include('resultroll.php');
-// if(isset($_POST['upload'])){
 
+if(isset($_POST['upload'])){
+$f=$_POST['rn'];
 
-// }
+}
 ?>
